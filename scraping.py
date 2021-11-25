@@ -27,7 +27,7 @@ def scrape_all():
 executable_path = {'executable_path': ChromeDriverManager().install()}
 browser = Browser('chrome', **executable_path, headless=False)
 
-def mars_news():
+def mars_news(browser):
     #Visit the Mar´s website
     url = 'https://redplanetscience.com'
     browser.visit(url)
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     # If running as script, print scraped data
     print(scrape_all())
 
-
+#browser.quit()
 
 
 
